@@ -884,7 +884,7 @@ function BibTex(options)
 	this.rtfstring         = 'AUTHORS, "{\b TITLE}", {\i JOURNAL}, YEAR';
 	this.htmlstring        = 'AUTHORS, "<strong>TITLE</strong>", <em>JOURNAL</em>, YEAR<br />';
 	this.allowedEntryTypes = array(
-		'journal',
+		'article',
 		'book',
 		'booklet',
 		'confernce',
@@ -2628,7 +2628,7 @@ var bibtexify = (function($) {
                 ", pp. " + entryData.pages +
                 ((entryData.address)?", " + entryData.address:"") + ".<\/em>";
         },
-        journal: function(entryData) {
+        article: function(entryData) {
             return this.authors2html(entryData.author) + " (" + entryData.year + "). " +
                 entryData.title + ". <em>" + entryData.journal + ", " + entryData.volume +
                 ((entryData.number)?"(" + entryData.number + ")":"")+ ", " +
@@ -2688,7 +2688,7 @@ var bibtexify = (function($) {
             'incollection': 50,
             'proceedings': 60,
             'conference': 70,
-            'journal': 80,
+            'article': 80,
             'phdthesis': 90,
             'inbook': 100,
             'proceedings': 105,
@@ -2697,7 +2697,7 @@ var bibtexify = (function($) {
         },
         // labels used for the different types of entries
         labels: {
-            'journal': 'Journal',
+            'article': 'Journal',
             'book': 'Book',
             'conference': 'Conference',
             'inbook': 'Book chapter',
