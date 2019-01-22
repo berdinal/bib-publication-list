@@ -884,7 +884,7 @@ function BibTex(options)
 	this.rtfstring         = 'AUTHORS, "{\b TITLE}", {\i JOURNAL}, YEAR';
 	this.htmlstring        = 'AUTHORS, "<strong>TITLE</strong>", <em>JOURNAL</em>, YEAR<br />';
 	this.allowedEntryTypes = array(
-		'article',
+		'journal',
 		'book',
 		'booklet',
 		'confernce',
